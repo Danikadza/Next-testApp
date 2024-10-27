@@ -33,6 +33,7 @@ header {
     margin-bottom: 48px;  
     line-height: 12px;     
 }
+/**/
 /*стили для главной страницы*/
 .post__group{
   display: flex;
@@ -41,8 +42,50 @@ header {
   justify-content: center;   
   align-items: center;  
 }
+/**/
 /*стили для страницы постов*/
+/**/
 /*стили для компонента post*/
+/**/
+/*стили для компонента Rating*/
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 1px;
+  width: 193px;
+  height: 27px;
+  border-radius: 30px; /* Это закругление для всего контейнера */
+}
+
+.rating__likes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 8px 8px 12px;
+  gap: 6px;
+  width: 95px;
+  height: 27px;
+  background: rgba(4, 4, 5, 0.04);
+  border: none;
+  border-top-left-radius: 30px; /* Закругление только с левой стороны */
+  border-bottom-left-radius: 30px; /* Закругление только с левой стороны */
+}
+
+.rating__dislikes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 8px 8px 12px;
+  gap: 6px;
+  width: 97px;
+  height: 27px;
+  background: rgba(4, 4, 5, 0.04);
+  border: none;
+  border-top-right-radius: 30px; /* Закругление только с правой стороны */
+  border-bottom-right-radius: 30px; /* Закругление только с правой стороны */
+}
 /**/
 * {
   box-sizing: border-box;
