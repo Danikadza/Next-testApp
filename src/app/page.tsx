@@ -1,5 +1,11 @@
+import Post from "./components/Post";
+
 export default function Home() {
   return (
-    <h1>ikakprosto.ru</h1>
+    <div className="post__group">
+      <Post/>
+      <Post/>
+      <Post/>
+    </div>
   );
 }

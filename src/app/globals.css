@@ -23,7 +23,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/*стили для header*/
+header {
+  display: flex;             
+    justify-content: center;   
+    align-items: center;        
+    height: 76px; 
+    color: #FF6B00;  
+    margin-bottom: 48px;  
+    line-height: 12px;     
+}
+/*стили для главной страницы*/
+.post__group{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;   
+  align-items: center;  
+}
+/*стили для страницы постов*/
+/*стили для компонента post*/
+/**/
 * {
   box-sizing: border-box;
   padding: 0;

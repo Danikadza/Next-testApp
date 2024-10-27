@@ -1,10 +1,13 @@
 import React from "react";
+import Link from "next/link";
 
 const Header = () => {
-    return(
-        <div>
-            <h1>ikakprosto.ru</h1>
-        </div>
+    return (
+        <header>
+            <h1>
+                <Link href="/">ikakprosto.ru</Link>
+            </h1>
+        </header>
     )
 }
 
