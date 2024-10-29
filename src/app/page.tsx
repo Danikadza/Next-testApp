@@ -6,12 +6,9 @@ async function fetchData() {
   return result.posts
 }
  
-
 export default async function Home() {
 
   const posts = await fetchData();
-
-
 
   return (
     <div className="post__group">
