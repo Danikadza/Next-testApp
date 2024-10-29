@@ -60,6 +60,7 @@ header {
 .post__info {
  display: flex;
  gap: 8px;
+ align-items: center;
 }
 /**/
 /*стили для компонента Rating*/
