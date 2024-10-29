@@ -57,6 +57,7 @@ header {
  display: flex;
  gap: 8px;
  align-items: center;
+ font-size: small;
 }
 
 .post__info__comments {
@@ -71,6 +72,10 @@ header {
   transition: opacity 0.3s;
 }
 
+.post__info__date {
+  opacity: 0.4;
+}
+
 /**/
 /*стили для компонента Rating*/
 .rating {
@@ -81,7 +86,7 @@ header {
   gap: 1px;
   width: 193px;
   height: 27px;
-  border-radius: 30px; /* Это закругление для всего контейнера */
+  border-radius: 30px;
 }
 
 .rating__likes {
@@ -94,8 +99,9 @@ header {
   height: 27px;
   background: rgba(4, 4, 5, 0.04);
   border: none;
-  border-top-left-radius: 30px; /* Закругление только с левой стороны */
-  border-bottom-left-radius: 30px; /* Закругление только с левой стороны */
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px;
+  font-size: small;
 }
 
 .rating__dislikes {
@@ -108,8 +114,9 @@ header {
   height: 27px;
   background: rgba(4, 4, 5, 0.04);
   border: none;
-  border-top-right-radius: 30px; /* Закругление только с правой стороны */
-  border-bottom-right-radius: 30px; /* Закругление только с правой стороны */
+  border-top-right-radius: 30px; 
+  border-bottom-right-radius: 30px; 
+  font-size: small;
 }
 
 .liked {
