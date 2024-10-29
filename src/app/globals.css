@@ -47,6 +47,10 @@ header {
 /**/
 /*стили для компонента post*/
 .post {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 24px;
 }
  
 .post__text {
