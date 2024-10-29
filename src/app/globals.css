@@ -46,6 +46,17 @@ header {
 /*стили для страницы постов*/
 /**/
 /*стили для компонента post*/
+.post {
+}
+ 
+.post__text {
+
+}
+
+.post__info {
+ display: flex;
+ gap: 8px;
+}
 /**/
 /*стили для компонента Rating*/
 .rating {
