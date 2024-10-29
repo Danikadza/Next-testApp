@@ -111,6 +111,15 @@ header {
   border-top-right-radius: 30px; /* Закругление только с правой стороны */
   border-bottom-right-radius: 30px; /* Закругление только с правой стороны */
 }
+
+.liked {
+  background-color: #FF6B00;
+  color: white;
+}
+.disliked{
+  background-color: #0a0a0a;
+  color: white;
+}
 /**/
 * {
   box-sizing: border-box;
