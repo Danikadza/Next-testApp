@@ -30,8 +30,14 @@ const Rating = ({ likes, dislikes }: RatingProps) => {
 
     return (
         <div className="rating">
-            <button className={`rating__likes ${rating === 'like' ? 'liked' : ''}`} onClick={handleLikeClick} ><Image src="/Like.svg" alt="like" width={13} height={11} />Like {likes}</button>
-            <button className={`rating__dislikes ${rating === 'dislike' ? 'disliked' : ''}`} onClick={handleDislikeClick}><Image src="/Dislike.svg" alt="like" width={13} height={11} />Trash {dislikes}</button>
+            <button className={`rating__likes ${rating === 'like' ? 'liked' : ''}`} onClick={handleLikeClick} >
+                {rating === 'like' ? <Image src="/FilledLike.svg" alt="like" width={13} height={11}/> : <Image src="/Like.svg" alt="like" width={13} height={11}/>}
+                Like {likes}
+            </button>
+            <button className={`rating__dislikes ${rating === 'dislike' ? 'disliked' : ''}`} onClick={handleDislikeClick}>
+                {rating === 'dislike' ? <Image src="/FilledDislike.svg" alt="like" width={13} height={11} /> : <Image src="/Dislike.svg" alt="like" width={13} height={11} />}
+                Trash {dislikes}
+            </button>
         </div>
     )
 }
