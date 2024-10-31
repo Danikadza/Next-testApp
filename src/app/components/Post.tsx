@@ -13,6 +13,7 @@ interface PostProps {
 }
 
 const Post = ({title, text, date, likes, dislikes, tags, id}: PostProps) => {
+    console.log(title)
     return (
         <div className="post">
             <h1 className="post__title">{title}</h1>
