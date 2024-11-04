@@ -43,7 +43,14 @@ header {
   align-items: center;  
 }
 /**/
-/*стили для страницы постов*/
+/*стили для страницы поста*/
+.commentsPage {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;   
+  align-items: center;  
+}
 /**/
 /*стили для компонента post*/
 .post {
@@ -127,6 +134,9 @@ header {
   background-color: #0a0a0a;
   color: white;
 }
+/**/
+/*стили для компонента comment*/
+
 /**/
 * {
   box-sizing: border-box;
