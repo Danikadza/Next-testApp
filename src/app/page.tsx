@@ -15,7 +15,7 @@ interface PostProps {
     likes: number;
     dislikes: number;
   };
-  tags: string;
+  tags: string[];
 }
 
 export default async function Home() {

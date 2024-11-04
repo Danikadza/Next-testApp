@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "./Rating";
 import Link from "next/link";
+import Tags from "./Tags";
 
 interface PostProps {
     id: string;
@@ -9,7 +10,7 @@ interface PostProps {
     date: string;
     likes: number;
     dislikes: number;
-    tags: string;
+    tags: string[];
 }
 
 const Post = ({title, text, date, likes, dislikes, tags, id}: PostProps) => {
@@ -21,7 +22,7 @@ const Post = ({title, text, date, likes, dislikes, tags, id}: PostProps) => {
                 <Rating likes={likes} dislikes={dislikes}/>
                 <Link href={`/${id}`} className="post__info__comments">Open comments</Link>
                 <div className="post__info__date">{date}</div>
-                <div className="post__info__tags">{tags}</div>
+                <Tags tags={tags}/>
             </div>
         </div>
     )
