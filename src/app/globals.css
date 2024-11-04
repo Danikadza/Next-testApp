@@ -74,7 +74,6 @@ header {
 
 .post__info__comments:hover {
   color: #FF6B00;
-  text-decoration: underline;
   opacity: 0.7;
   transition: opacity 0.3s;
 }
@@ -136,7 +135,42 @@ header {
 }
 /**/
 /*стили для компонента comment*/
+.comment {
+  display: flex;
+  width: 50%;
+  gap: 8px;
+}
+.comment__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
+.comment__body__username {
+  font-weight: bold;
+}
+
+.comment__body__info {
+  display: flex;
+  gap: 20px;
+}
+
+.comment__body__info__date {
+  opacity: 0.4;
+}
+
+.comment__body__info__delete{
+  color: #FF6B00;
+  text-decoration: underline;
+  border: none;
+  background-color: white;
+}
+
+.comment__body__info__delete:hover{
+  color: #FF6B00;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
 /**/
 * {
   box-sizing: border-box;
