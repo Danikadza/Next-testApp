@@ -1,10 +1,14 @@
+"use client";
+
 import Comment from "./Comment";
+import React, { useState, useEffect} from 'react';
+
 
 interface CommentsProps {
     total: number;
     skip: number;
     limit: number;
-    comments: [{
+    comments: {
         id: number;
         body: string;
         postId: number;
@@ -14,7 +18,7 @@ interface CommentsProps {
             username: string;
             fullname: string;
         }
-    }]
+    }[]
 }
 
 interface CommentProps {
@@ -41,16 +45,29 @@ function getCommentWord(count:number) {
 
 const Comments = (commentsData: CommentsProps) => {
 
-    const comments = commentsData.comments
+    const [comments, setComments] = useState(commentsData.comments);
 
-    const commentWord = getCommentWord(commentsData.total);
+    const [commentsTotal, setCommentsTotal] = useState(commentsData.total);
+
+    const [commentWord, setCommentsWord] = useState(getCommentWord(commentsData.total));
+
+
+    const handleDelete = (id: number) => {
+        const updatedComments = comments.filter(comment => comment.id !== id);
+        setComments(updatedComments);
+        setCommentsTotal(commentsTotal - 1)
+    };
+
+    useEffect(() =>{
+        setCommentsWord(getCommentWord(commentsTotal))
+    },[commentsTotal]);
 
     return (
         <>
-        <h1>{commentsData.total} {commentWord}</h1>
+        <h1>{commentsTotal} {commentWord}</h1>
         {
         comments.map((comment:CommentProps) => 
-          <Comment key={comment.id} postId={comment.postId} id={comment.id} user={comment.user} body={comment.body} likes={comment.likes} />
+          <Comment key={comment.id} postId={comment.postId} id={comment.id} user={comment.user} body={comment.body} likes={comment.likes} onDelete={handleDelete}/>
         )
       }
         </>
